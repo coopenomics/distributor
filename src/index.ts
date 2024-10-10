@@ -34,7 +34,7 @@ app.post('/withdraw', async (req: Request, res: Response) => {
     const authHeader = req.headers.authorization;
     
     // Проверка на наличие и соответствие заголовка Authorization
-    if (!authHeader || authHeader !== `Bearer ${process.env.SECRET}`) {
+    if (!authHeader || authHeader !== `${process.env.SECRET}`) {
       console.log('on auth error', authHeader)
       return res.status(403).json({ error: 'Forbidden: Invalid or missing Authorization header' });
     }
@@ -62,7 +62,7 @@ app.post('/contribution', async (req: Request, res: Response) => {
     const authHeader = req.headers.authorization;
 
     // Проверка на наличие и соответствие заголовка Authorization
-    if (!authHeader || authHeader !== `Authorization ${process.env.SECRET}`) {
+    if (!authHeader || authHeader !== `${process.env.SECRET}`) {
       console.log('on auth error')
       return res.status(403).json({ error: 'Forbidden: Invalid or missing Authorization header' });
     }
