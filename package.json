@@ -1,0 +1,27 @@
+{
+  "name": "distributor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon",
+    "distribution": "esno src/index.ts",
+    "refresh": "esno src/refresh.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.5",
+    "esno": "^4.8.0",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/express": "^5.0.0",
+    "nodemon": "^3.1.7"
+  }
+}

@@ -1,0 +1,10 @@
+version: '3'
+services:
+  distributor:
+    container_name: distributor
+    build: .
+    ports:
+      - "4500:4500"
+    volumes:
+      - .:/app
+    command: pnpm run distribution
